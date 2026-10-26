@@ -37,6 +37,7 @@ function parseArgs(argv) {
     else if (a === '--report') out.report = next();
     else if (a === '--console-filter') out.consoleFilter = next();
     else if (a === '--verbose') out.verbose = true;
+    else if (a === '--edge-arg') (out.edgeArgs = out.edgeArgs || []).push(next());
     else throw new Error('unknown arg: ' + a);
   }
   if (!out.url) throw new Error('--url is required');
@@ -121,8 +122,9 @@ async function main() {
     '--no-first-run', '--no-default-browser-check', '--disable-extensions',
     '--disable-background-networking', '--disable-sync',
     '--remote-debugging-port=' + port,
-    '--user-data-dir=' + profile,
-    'about:blank'
+    '--user-data-dir=' + profile
+  ].concat(opts.edgeArgs || [], ['about:blank']);
+  const args_unused = [
   ];
   const child = spawn(EDGE, args, { stdio: 'ignore', windowsHide: true });
   let ws = null;

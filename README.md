@@ -5,6 +5,9 @@
 
 纯静态网页，**双击 `index.html` 即可离线运行**，不需要安装、不需要本地服务器、不联网也能用。
 
+> **在线访问：<https://lancelot-13-fucklove.github.io/muscle-atlas/>**
+> （GitHub Pages 部署；深链接示例：`…/#m=pectoralis-major` 直接打开胸大肌）
+
 ![正面](shots/screenshot-front.png)
 
 ![背面](shots/screenshot-back.png)
