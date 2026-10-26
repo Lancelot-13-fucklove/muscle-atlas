@@ -1,0 +1,15 @@
+# 发布产物（由 tools/build_deploy.py 生成，可随时重建）
+deploy/
+muscle-atlas-deploy.zip
+
+# 无头浏览器自测产物
+_selftest.html
+_selftest_*.html
+shots/*.log
+shots/*.txt
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
